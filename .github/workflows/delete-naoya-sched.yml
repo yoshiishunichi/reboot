@@ -1,0 +1,17 @@
+name: schedule
+
+on:
+  schedule:
+    - cron: "0 * * * *"
+  push:
+    branches: [master]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: reboot
+        run: |
+          curl ${{secrets.DELETE_API_BASE_URL}}
