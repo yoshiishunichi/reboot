@@ -14,4 +14,4 @@ jobs:
         uses: actions/checkout@v2
       - name: reboot
         run: |
-          curl ${{secrets.PUNI_PORTAL}}
+          curl ${{secrets.TORINIKU_QUIZ}}
